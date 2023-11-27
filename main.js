@@ -9,7 +9,6 @@ async function checkWeather(city){
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
     var data = await response.json();
 
-    console.log(data);
     if(response.status === 404 || searchBox.value === ""){
         document.querySelector('.error').style.display = "block";
         document.querySelector(".weather").style.height = "0px";
